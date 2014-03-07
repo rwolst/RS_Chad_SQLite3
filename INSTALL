@@ -19,7 +19,7 @@ INSTALL
 
 9) Browse to . and run
          $sqlite3 retrosheet.db '.read partition.sql'
-		 $sqlite3 retrosheet.db '.read lookup-codes.sql'
+		 $sqlite3 retrosheet.db '.read lookup_codes.sql'
 		 
 10) Can now delete events_bck and games_bck tables i.e.
          $sqlite3 retrosheet.db 'DROP TABLE events_bck;'

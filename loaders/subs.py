@@ -5,7 +5,7 @@ years = open('../Year.txt', 'rb').read()
 
 for year in years.split('\r\n'):
     with open('../data/parsed/sub{0}.csv'.format(year), 'rb') as csvfile:
-        spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+        spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
 
         con = lite.connect('../retrosheet.db')
         cur = con.cursor()

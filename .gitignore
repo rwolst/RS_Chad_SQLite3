@@ -1,0 +1,4 @@
+./retrosheet.db
+./data/parsed/*
+./data/unzipped/*.EV*
+./data/zipped/*.zip
