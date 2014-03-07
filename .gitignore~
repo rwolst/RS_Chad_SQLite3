@@ -1,6 +1,5 @@
 retrosheet.db
 data/parsed/*
 data/unzipped/*.EV*
-data/unzipped/*.ROS
-data/unzipped/TEAM*
+data/unzipped/
 data/zipped/*.zip
