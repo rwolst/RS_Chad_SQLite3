@@ -1,0 +1,28 @@
+INSTALL
+
+1) Copy Retrosheet folder to C:/Retrosheet and browse to it
+
+2) Create empty file/database retrosheet.db
+
+3) Insert the years you wish to download into ./Year.txt each on separate lines
+
+4) Run 
+       $sqlite3 retrosheet.db '.read retrosheet-schema.sql'
+
+5) Browse to ./data/zipped and run 'gen_zip_files.py'
+
+6) Run 'get_zip_files.batch'
+
+7) Browse to ./data/unzipped and run '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat'
+
+8) Browse to ./loaders and run 'events.py' then 'games.py' then 'subs.py'
+
+9) Browse to . and run
+         $sqlite3 retrosheet.db '.read partition.sql'
+		 $sqlite3 retrosheet.db '.read lookup-codes.sql'
+		 
+10) Can now delete events_bck and games_bck tables i.e.
+         $sqlite3 retrosheet.db 'DROP TABLE events_bck;'
+		 $sqlite3 retrosheet.db 'DROP TABLE games_bck;'
+	   
+	   
