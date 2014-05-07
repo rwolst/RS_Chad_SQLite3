@@ -1,5 +1,3 @@
-This creates a baseball events and games SQLite3 database using Retrosheet, Chadwick and closely follows
-the instructions in http://www.hardballtimes.com/tht-live/building-a-retrosheet-database-the-short-form/.
+This creates a baseball events and games SQLite3 database using Retrosheet, Chadwick and closely follows the instructions in http://www.hardballtimes.com/tht-live/building-a-retrosheet-database-the-short-form/.
 
-The chadwick functions come with the files, only dependencies are Python with sqlite3. Follow the instructions
-in INSTALL to set up the database.
+The chadwick functions come with the files, only dependencies are Python with sqlite3. Follow the instructions in INSTALL to set up the database.
