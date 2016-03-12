@@ -13,9 +13,20 @@ INSTALL
 
 5) Browse to ./data/zipped and run 'gen_zip_files.py'
 
-6) Run 'get_zip_files.batch'
+6) Run 'get_zip_files.batch' (Windows) or 'get_zip_files.sh' (Linux)
 
-7) Browse to ./data/unzipped and run '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat'
+7) Windows:
+       i) Download latest chadwick tools binaries and place in comon/program
+
+   Linux:
+       i) Download latest version of chadwick tools and unzip into data/unzipped
+        
+       ii) Compile the tools using ./configure; make in the chadwick directory
+
+       iii) Copy the compiled tools cwevent, cwgame, cwsub into the comon/program directory
+
+7) Browse to ./data/unzipped and run i) (Windows) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' ii) (Linux) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
+   NOTE: It may be necessary to make the directory data/parsed.
 
 8) Browse to ./loaders and run 'events.py' then 'games.py' then 'subs.py'
 

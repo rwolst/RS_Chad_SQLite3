@@ -1,4 +1,7 @@
 retrosheet.db
+*.swp
+data/unzipped/chadwick*
+*.libs/
 id_split.sql
 data/parsed/*
 data/unzipped/*.EV*
