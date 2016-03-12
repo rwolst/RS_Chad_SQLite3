@@ -1,6 +1,9 @@
 retrosheet.db
+id_split.sql
 data/parsed/*
 data/unzipped/*.EV*
 data/unzipped/*.ROS
 data/unzipped/TEAM*
 data/zipped/*.zip
+extras
+analysis

@@ -1,0 +1,26 @@
+UPDATE
+
+0) Check you have latest version of chadwick program files, if not replace the new ones into ./common/programs
+
+1) Insert the years you wish to download into ./Year.txt each on separate lines
+
+2) Run 
+       $sqlite3 retrosheet.db '.read retrosheet-update-schema.sql'
+	   
+3) Browse to ./data/zipped and run 'gen_zip_files.py'
+
+4) Run 'get_zip_files.batch'
+
+5) Browse to ./data/unzipped and run '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat'
+
+6) Browse to ./loaders and run 'events.py' then 'games.py' then 'subs.py'
+
+7) Browse to . and run
+         $sqlite3 retrosheet.db '.read partition-update.sql'
+		 
+8) Browse to . and run
+         $sqlite3 retrosheet.db '.read extras/id_split-update.sql'		 
+		 
+9) Can now delete events_bck and games_bck tables i.e.
+         $sqlite3 retrosheet.db 'DROP TABLE events_bck;'
+		 $sqlite3 retrosheet.db 'DROP TABLE games_bck;'

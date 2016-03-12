@@ -1,5 +1,7 @@
 INSTALL
 
+0) Check you have latest version of chadwick program files, if not replace the new ones into ./common/programs
+
 1) Copy Retrosheet folder to C:/Retrosheet and browse to it
 
 2) Create empty file/database retrosheet.db
@@ -20,9 +22,13 @@ INSTALL
 9) Browse to . and run
          $sqlite3 retrosheet.db '.read partition.sql'
 		 $sqlite3 retrosheet.db '.read lookup_codes.sql'
+
+10) Can also optionally run extras/id_split.sql
 		 
-10) Can now delete events_bck and games_bck tables i.e.
+11) Can now delete events_bck and games_bck tables i.e.
          $sqlite3 retrosheet.db 'DROP TABLE events_bck;'
 		 $sqlite3 retrosheet.db 'DROP TABLE games_bck;'
+		 
+
 	   
 	   

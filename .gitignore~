@@ -1,5 +1,0 @@
-retrosheet.db
-data/parsed/*
-data/unzipped/*.EV*
-data/unzipped/
-data/zipped/*.zip
