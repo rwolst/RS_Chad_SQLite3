@@ -5,5 +5,7 @@ data/unzipped/*.EV*
 data/unzipped/*.ROS
 data/unzipped/TEAM*
 data/zipped/*.zip
+data/unzipped/backup/*
+data/zipped/backup/*
 extras
 analysis
