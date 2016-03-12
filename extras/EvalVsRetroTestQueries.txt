@@ -1,0 +1,3 @@
+SELECT r.PlayNumber, r.HomeTeam, r.Date, r.Gamenumber FROM main.EvaluatedPlays as r WHERE Date < 20110000 AND Date > 20100000 AND HBP = 1 AND NOT EXISTS (SELECT 1 FROM db1.EVENTS_ID as s WHERE s.PlayNumber = r.PlayNumber AND s.HomeTeam = r.HomeTeam AND s.Date = r.Date And s.Gamenumber = r.Gamenumber AND EVENT_CD = 16);
+SELECT r.PlayNumber, r.HomeTeam, r.Date, r.Gamenumber FROM db1.EVENTS_ID as r WHERE Date < 20110000 AND Date > 20100000 AND Event_CD=19 AND NOT EXISTS (SELECT 1 FROM main.EvaluatedPlays as s WHERE s.PlayNumber = r.PlayNumber AND s.HomeTeam = r.HomeTeam AND s.Date = r.Date And s.Gamenumber = r.Gamenumber AND FChoice=1);
+
