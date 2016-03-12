@@ -2,6 +2,7 @@ retrosheet.db
 *.swp
 data/unzipped/chadwick*
 *.libs/
+comon/programs/*
 id_split.sql
 data/parsed/*
 data/unzipped/*.EV*
