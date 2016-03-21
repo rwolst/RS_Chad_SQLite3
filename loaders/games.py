@@ -1,5 +1,12 @@
 import sqlite3 as lite
 import csv
+import argparse
+
+parser = argparse.ArgumentParser(description = "Run a baseball model and output performance")
+parser.add_argument('--databaseName', nargs='?', type=str, help='Name of the database you wish to enter data into [default=retrosheet.db]', default='retrosheet.db')
+
+NS = parser.parse_args()
+db = NS.databaseName
 
 years = open('../Year.txt', 'rb').read()
 
@@ -8,7 +15,7 @@ for year in years.split('\r\n'):
         with open('../data/parsed/games{0}.csv'.format(year), 'rb') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
 
-            con = lite.connect('../retrosheet.db')
+            con = lite.connect('../{}'.format(db))
             cur = con.cursor()
             
             SQL = """INSERT INTO games_bck (GAME_ID,

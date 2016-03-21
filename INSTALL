@@ -23,9 +23,9 @@ INSTALL
         
        ii) Compile the tools using ./configure; make in the chadwick directory
 
-       iii) Copy the compiled tools cwevent, cwgame, cwsub into the comon/program directory
+       iii) Copy the compiled tools (or create symlinks) cwevent, cwgame, cwsub into the comon/program directory
 
-7) Browse to ./data/unzipped and run i) (Windows) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' ii) (Linux) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
+7) Browse to ./data/unzipped and run clean.sh, then i) (Windows) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' ii) (Linux) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
    NOTE: It may be necessary to make the directory data/parsed.
 
 8) Browse to ./loaders and run 'events.py' then 'games.py' then 'subs.py'

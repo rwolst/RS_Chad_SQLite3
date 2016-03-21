@@ -12,3 +12,4 @@ data/unzipped/backup/*
 data/zipped/backup/*
 analysis
 *-journal
+Backup/*
