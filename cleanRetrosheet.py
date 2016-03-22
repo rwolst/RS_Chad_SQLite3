@@ -10,7 +10,7 @@ with con:
 
 # Now filter tables to find all Mu Sigma tables
 for player in ['pitcher', 'batter', 'Pitcher', 'Batter']:
-    for stat in ['Mu', 'Sigma', 'SOBB_HBPHit', 'SingleDoubleTripleHROut']:
+    for stat in ['Mu', 'Sigma', 'SOBB_HBPHit', 'SingleDoubleTripleHROut', '_hands']:
         filtered_tables = filter(lambda x: x[0].find('{}{}'.format(player, stat)) != -1, tables)
 
         for table in filtered_tables:
