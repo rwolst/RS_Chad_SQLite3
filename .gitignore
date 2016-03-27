@@ -2,7 +2,7 @@ retrosheet.db
 *.swp
 data/unzipped/chadwick*
 *.libs/
-comon/programs/*
+common/programs/*
 data/parsed/*
 data/unzipped/*.EV*
 data/unzipped/*.ROS
