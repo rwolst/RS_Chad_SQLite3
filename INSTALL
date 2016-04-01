@@ -40,6 +40,6 @@ INSTALL
          $sqlite3 retrosheet.db 'DROP TABLE events_bck;'
 		 $sqlite3 retrosheet.db 'DROP TABLE games_bck;'
 		 
-
+12) Run python python extras/teamIds.py to insert a team Id cross reference table
 	   
 	   
