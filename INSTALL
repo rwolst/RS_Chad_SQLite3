@@ -1,6 +1,6 @@
 INSTALL
 
-0) Check you have latest version of chadwick program files, if not replace the new ones into ./common/programs
+0) Check you have latest version of chadwick program files, if not replace the new ones into ./common/programs (if building from source, create symlinks is easiest)
 
 1) Copy Retrosheet folder to C:/Retrosheet and browse to it
 
@@ -28,6 +28,8 @@ INSTALL
 7) Browse to ./data/unzipped and run clean.sh (I think this should be actually done before above step), then i) (Windows) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' ii) (Linux) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
    NOTE: It may be necessary to make the directory data/parsed.
 
+7b) Run clean.sh to clean for next time the program is run (in ./data/unzipped)
+
 8) Browse to ./loaders and run 'events.py' then 'games.py' then 'subs.py'
 
 9) Browse to . and run
@@ -40,6 +42,6 @@ INSTALL
          $sqlite3 retrosheet.db 'DROP TABLE events_bck;'
 		 $sqlite3 retrosheet.db 'DROP TABLE games_bck;'
 		 
-12) Run python python extras/teamIds.py to insert a team Id cross reference table
-	   
-	   
+12) Run python extras/teamIds.py to insert a team Id cross reference table
+
+13) Run python extras/playerIds.py to insert a player Id cross reference table

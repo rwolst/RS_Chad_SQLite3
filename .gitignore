@@ -13,3 +13,4 @@ data/zipped/backup/*
 analysis
 *-journal
 Backup/*
+*.csv

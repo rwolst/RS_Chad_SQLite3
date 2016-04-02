@@ -14,6 +14,7 @@ for year in years.split('\r\n'):
     if year != '':
         with open('../data/parsed/games{0}.csv'.format(year), 'rb') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+            data = [row for row in spamreader]
 
             con = lite.connect('../{}'.format(db))
             cur = con.cursor()
@@ -102,8 +103,7 @@ for year in years.split('\r\n'):
                         HOME_LINEUP9_FLD_CD,
                         AWAY_FINISH_PIT_ID,
                         HOME_FINISH_PIT_ID)
-                        VALUES {0}"""
+                        VALUES ({})"""
             with con:   
-                for row in spamreader:
-                    cur.execute(SQL.format(tuple(row)))
+                cur.executemany(SQL.format(','.join(['?' for i in range(len(data[0]))])), data)
             

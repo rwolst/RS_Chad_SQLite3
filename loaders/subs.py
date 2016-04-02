@@ -14,13 +14,13 @@ for year in years.split('\r\n'):
     if year != '':
         with open('../data/parsed/sub{0}.csv'.format(year), 'rb') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+            data = [row for row in spamreader]
 
             con = lite.connect('../{}'.format(db))
             cur = con.cursor()
             
             SQL = """INSERT INTO subs ( GAME_ID,INN_CT,BAT_HOME_ID ,SUB_ID ,SUB_HOME_ID ,SUB_LINEUP_ID ,SUB_FLD_CD ,REMOVED_ID ,REMOVED_FLD_CD ,EVENT_ID )
-                     VALUES {0}"""
+                     VALUES ({})"""
             with con:   
-                for row in spamreader:
-                    cur.execute(SQL.format(tuple(row)))
+                cur.executemany(SQL.format(','.join(['?' for i in range(len(data[0]))])), data)
                 
