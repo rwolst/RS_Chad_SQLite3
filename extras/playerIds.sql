@@ -1,2 +1,2 @@
 .mode csv
-.import master.csv PlayerIds
+.import CurrentNames.csv PlayerIds

@@ -11,6 +11,8 @@ INSTALL
 4) Run 
        $sqlite3 retrosheet.db '.read retrosheet-schema.sql'
 
+4b) Browse to ./data/unzipped and run clean.sh and browse to ./data/parsed and run rm *.csv
+
 5) Browse to ./data/zipped and run 'gen_zip_files.py'
 
 6) Run 'get_zip_files.batch' (Windows) or 'get_zip_files.sh' (Linux)

@@ -1,3 +1,9 @@
+http://www.retrosheet.org/events/2006eve.zip
+http://www.retrosheet.org/events/2007eve.zip
+http://www.retrosheet.org/events/2008eve.zip
+http://www.retrosheet.org/events/2009eve.zip
+http://www.retrosheet.org/events/2010eve.zip
+http://www.retrosheet.org/events/2011eve.zip
 http://www.retrosheet.org/events/2012eve.zip
 http://www.retrosheet.org/events/2013eve.zip
 http://www.retrosheet.org/events/2014eve.zip
