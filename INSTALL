@@ -1,6 +1,6 @@
 INSTALL
 
-0) Check you have latest version of chadwick program files, if not replace the new ones into ./common/programs (if building from source, create symlinks is easiest)
+Note: It may be necessary to make Linux shell scripts executable before running them i.e. $chmod +x 'scriptName.sh'
 
 1) Copy Retrosheet folder to C:/Retrosheet and browse to it
 
@@ -11,7 +11,7 @@ INSTALL
 4) Run 
        $sqlite3 retrosheet.db '.read retrosheet-schema.sql'
 
-4b) Browse to ./data/unzipped and run clean.sh and browse to ./data/parsed and run rm *.csv
+4b) Browse to ./data/unzipped and run clean.sh and browse to ./data/parsed if it exists and run rm *.csv, otherwise create data/parsed
 
 5) Browse to ./data/zipped and run 'gen_zip_files.py'
 
@@ -27,8 +27,12 @@ INSTALL
 
        iii) Copy the compiled tools (or create symlinks) cwevent, cwgame, cwsub into the comon/program directory
 
-7) Browse to ./data/unzipped and run clean.sh (I think this should be actually done before above step), then i) (Windows) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' ii) (Linux) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
-   NOTE: It may be necessary to make the directory data/parsed.
+7) Browse to data/unzipped amd run 
+   Windows:
+       i) '$cwevent.bat' then '$cwgame.bat' then '$cwsub.bat' 
+
+   Linux:
+       i) 'cwevent.sh' then 'cwgame.sh' then 'cwsub.sh'
 
 7b) Run clean.sh to clean for next time the program is run (in ./data/unzipped)
 
